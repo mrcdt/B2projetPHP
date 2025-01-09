@@ -1,0 +1,84 @@
+/* Style général */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #000000; /* Couleur profonde de l'océan */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style pour le titre principal */
+.titre {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f0e68c; /* Doré, rappelant la richesse de Titanic */
+    text-shadow: 0 0 10px rgba(240, 230, 140, 0.7);
+    text-align: center;
+}
+
+/* Style des sous-titres */
+.sous-titre {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #b0c4de; /* Bleu clair, comme la mer calme */
+    z-index: 1000;
+}
+
+/* Style du formulaire */
+.form_login {
+    background: rgba(255, 255, 255, 0.1); /* Transparence élégante */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    width: 300px;
+    text-align: center;
+}
+
+/* Style des champs d'entrée */
+input[type="text"], .connexion {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* Placeholder stylisé */
+input::placeholder {
+    color: #dcdcdc;
+}
+
+/* Boutons */
+.button {
+    background-color: #0074D9; /* Bleu marin */
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #001f3f; /* Couleur plus foncée au survol */
+    border: 1px solid #0074D9;
+}
+
+/* Ligne de séparation */
+.divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, #ffffff, transparent);
+    margin: 15px 0;
+}

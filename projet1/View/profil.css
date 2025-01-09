@@ -1,0 +1,170 @@
+/* Style général */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+/* Overlay avec opacité réduite */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0); /* Légère opacité */
+    z-index: 0; /* Derrière tout le contenu */
+}
+
+/* Bouton "retour" */
+button {
+    background-color: #8a0000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 20px 0;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 1000;
+}
+
+button:hover {
+    background-color: #001f3f; /* Bleu foncé au survol */
+    transform: scale(1.05); /* Légère augmentation de taille */
+}
+
+/* Image de profil */
+img {
+    border-radius: 50%; /* Image en cercle */
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ajuste l'image pour remplir correctement */
+    border: 4px solid #ffffff; /* Bordure blanche élégante */
+    margin-bottom: 20px;
+    z-index: 1000;
+}
+
+/* Nom de profil */
+h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    z-index: 1000;
+}
+
+/* Section des images */
+#images {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center;
+    max-width: 80%;
+}
+
+#images h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #8a0000;
+}
+
+/* Tableau des images */
+#images table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Assure une largeur uniforme des colonnes */
+}
+
+#images td {
+    width: 20%; /* Chaque colonne prend 20% de la largeur */
+    height: 150px; /* Augmente la hauteur des cellules */
+    background-color: #f0e68c; /* Doré élégant */
+    border: 2px solid #8a0000; /* Bordures rouges plus épaisses */
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8a0000;
+    border-radius: 5px;
+    overflow: hidden; /* Empêche le contenu de déborder */
+    position: relative; /* Position relative pour contenir les images */
+}
+
+/* Images dans les cellules */
+#images td img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit parfaitement la cellule */
+    border-radius: 5px; /* Coin arrondi pour correspondre à la cellule */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* #images td:hover img {
+    transform: scale(1.1); /* Zoom léger au survol */
+} */
+
+/* Effet de survol */
+#images td:hover {
+    background-color: #8a0000; /* Rouge au survol */
+    color: #ffffff; /* Texte blanc au survol */
+    transform: scale(1.05); /* Légère augmentation de taille */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell-with-bg {
+    background-size: cover; /* L'image remplit toute la cellule */
+    background-position: center; /* Centre l'image dans la cellule */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    width: 100%; /* Largeur de la cellule */
+    height: 150px; /* Hauteur de la cellule */
+    border: 2px solid #8a0000; /* Bordures des cellules */
+    position: relative; /* Nécessaire si vous ajoutez du contenu */
+}
+
+.cell-with-bg p {
+    margin: 0;
+    color: #8a0000; /* Couleur du texte */
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 150px; /* Centre verticalement le texte dans la cellule */
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #images table {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #images h1 {
+        font-size: 1.5rem;
+    }
+}
